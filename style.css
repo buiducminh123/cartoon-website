@@ -1,0 +1,241 @@
+/* ===== Thiết lập chung ===== */
+* {
+    box-sizing: border-box;
+    /* width luôn gồm padding và border */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #333;
+    padding-top: 70px;
+    /* chừa chỗ cho header cố định */
+}
+
+/* Mức trung bình: bỏ gạch chân mọi liên kết */
+a {
+    text-decoration: none;
+}
+
+/* ===== HEADER cố định ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ff6f3c;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #ffe066;
+}
+
+.head-link {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.head-link a {
+    color: white;
+    white-space: nowrap;
+}
+
+/* Mức trung bình: rê chuột thì in đậm và đổi màu */
+.head-link a:hover {
+    font-weight: bold;
+    color: #ffe066;
+}
+
+.search input {
+    width: 220px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* ===== CONTENT: 2 cột ===== */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.left-content {
+    width: 300px;
+    flex-shrink: 0;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-content h3 {
+    margin-top: 0;
+}
+
+.sort {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.video-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.video-list a {
+    display: block;
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.video-list a:hover {
+    font-weight: bold;
+    color: #ff6f3c;
+    background-color: #fff3ec;
+}
+
+.right-content {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.right-content h2 {
+    margin-top: 0;
+}
+
+/* Khung video tự co giãn theo chiều rộng, luôn giữ tỉ lệ 16:9 */
+.right-content iframe,
+.right-content video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.note {
+    color: #777;
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* ===== Mức nâng cao: RESPONSIVE ===== */
+
+/* Tablet: màn hình từ 992px trở xuống */
+@media (max-width: 992px) {
+    .left-content {
+        width: 230px;
+    }
+
+    .head-link {
+        gap: 12px;
+    }
+
+    .search input {
+        width: 150px;
+    }
+}
+
+/* Điện thoại: màn hình từ 768px trở xuống */
+@media (max-width: 768px) {
+    body {
+        padding-top: 110px;
+        /* header cao hơn vì xuống 2 hàng */
+    }
+
+    .header {
+        height: auto;
+    }
+
+    .header-inner {
+        flex-wrap: wrap;
+        /* cho phép xuống hàng */
+        gap: 8px;
+        padding: 10px 15px;
+    }
+
+    .search {
+        margin-left: auto;
+        /* đẩy ô tìm kiếm sang phải */
+    }
+
+    .head-link {
+        order: 3;
+        /* đưa head-link xuống hàng dưới */
+        width: 100%;
+        overflow-x: auto;
+        /* nếu hẹp quá thì vuốt ngang */
+    }
+
+    .container {
+        flex-direction: column;
+        /* 2 cột thành xếp dọc */
+        padding: 0 10px;
+    }
+
+    .left-content {
+        width: 100%;
+        order: 2;
+        /* danh sách xuống dưới */
+    }
+
+    .right-content {
+        order: 1;
+        /* khung xem phim lên trên */
+        padding: 12px;
+    }
+}
+
+/* Điện thoại nhỏ: màn hình từ 480px trở xuống */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .search input {
+        width: 120px;
+    }
+}

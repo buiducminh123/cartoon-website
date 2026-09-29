@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoạt Hình Kids - Phim hoạt hình cho bé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER: logo + head-link + tìm kiếm ===== -->
+    <div class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Hoạt Hình <span>Kids</span></a>
+
+            <div class="head-link">
+                <a href="#">Trang chủ</a>
+                <a href="#">Mới cập nhật</a>
+                <a href="#">Xem nhiều nhất</a>
+                <a href="#">Giới thiệu</a>
+            </div>
+
+            <div class="search">
+                <input type="search" placeholder="Tìm phim theo tên...">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CONTENT ===== -->
+    <div class="container">
+
+        <!-- Left content: danh sách video -->
+        <div class="left-content">
+            <h3>Danh sách phim</h3>
+            <div class="sort">
+                Sắp xếp:
+                <select>
+                    <option>Mới cập nhật</option>
+                    <option>Xem nhiều nhất</option>
+                </select>
+            </div>
+            <ul class="video-list">
+                <li><a href="https://www.youtube.com/embed/VIDEO_ID_1" target="player">Tên phim 1</a></li>
+                <li><a href="https://www.youtube.com/embed/VIDEO_ID_2" target="player">Tên phim 2</a></li>
+                <li><a href="https://www.youtube.com/embed/VIDEO_ID_3" target="player">Tên phim 3</a></li>
+                <li><a href="https://www.youtube.com/embed/VIDEO_ID_4" target="player">Tên phim 4</a></li>
+                <li><a href="https://www.youtube.com/embed/VIDEO_ID_5" target="player">Tên phim 5</a></li>
+            </ul>
+        </div>
+
+        <!-- Right content: khu vực xem video -->
+        <div class="right-content">
+            <h2>Đang phát</h2>
+            <iframe name="player" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Trình phát phim"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="note">Chọn một phim trong danh sách để xem.</p>
+
+            <h3>Video giới thiệu</h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer">
+        <p>© 2026 Hoạt Hình Kids. Bản quyền thuộc về Bùi Đức Minh.</p>
+        <p>Website phim hoạt hình an toàn, không quảng cáo dành cho trẻ em.</p>
+    </div>
+
+</body>
+
+</html>
